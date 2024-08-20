@@ -113,7 +113,7 @@ namespace CollectionsMasterConsoleUI
             Console.WriteLine("Evens Only!!");
             
             OddKiller(myList);
-
+            NumberPrinter(myList);
             Console.WriteLine("------------------");
 
             //TODO: Sort the list then print results
@@ -136,12 +136,19 @@ namespace CollectionsMasterConsoleUI
         //TODO: Create a method that will remove all odd numbers from the list then print results
         private static void OddKiller(List<int> myList)
         {
-            for(int i = 0; i < 64; i++)
+            // for(int i = 0; i < 64; i++)
+            // {
+            //     if (i % 2 != 0)
+            //         myList.Remove(i);
+            // }
+            // NumberPrinter(myList);
+            for (int i = myList.Count - 1; i >= 0; i--)
             {
-                if (i % 2 != 0)
-                    myList.Remove(i);
+                if (myList[i] % 2 != 0)
+                {
+                    myList.Remove(myList[i]);
+                }
             }
-            NumberPrinter(myList);
            
         }
 
