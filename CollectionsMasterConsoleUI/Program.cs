@@ -25,13 +25,17 @@ namespace CollectionsMasterConsoleUI
             Populater(numberList);
 
             //DONE TODO: Print the first number of the array
+            Console.WriteLine("Here is the first number in the array:");
             Console.WriteLine($"{numberList[0]}");
 
             //DONE TODO: Print the last number of the array    
-            Console.WriteLine(($"{numberList[numberList.Length - 1]}"));
+            Console.WriteLine("Here is the LAST number in the array:");
+            Console.WriteLine(($"{numberList[numberList.Length-1]}"));
+            //Console.WriteLine($"{numberList[49]}");
 
             Console.WriteLine("All Numbers Original");
             //UNCOMMENT this method to print out your numbers from arrays or lists
+            Console.WriteLine("Here is the list of all original numbers: ");
             NumberPrinter(numberList);
             Console.WriteLine("-------------------");
 
@@ -49,6 +53,7 @@ namespace CollectionsMasterConsoleUI
 
             //DONE TODO: Create a method that will set numbers that are a multiple of 3 to zero then print to the console all numbers
             Console.WriteLine("Multiple of three = 0: ");
+            
             ThreeKiller(numberList);
 
             Console.WriteLine("-------------------");
@@ -163,7 +168,7 @@ namespace CollectionsMasterConsoleUI
         
         private static void NumberPrinter(int[] numberList)
         {
-            for (int i = 0; i < numberList.Length-1; i++)
+            for (int i = 0; i <= numberList.Length-1; i++)
             {
                 Console.WriteLine(numberList[i]);
             }
